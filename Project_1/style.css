@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-size: 18px;
+  font-family: sans-serif;
   /* color: #1b1043; */
 }
 
@@ -15,18 +16,24 @@ body {
   --text-color: #1b1043;
   --main-container-background: #58f5c5;
 }
+
 /* Utilities */
 h1 {
   font-size: 48px;
+  font-weight: 900;
 }
-h2 {
+h2,#city-name-value,#temp-value {
   font-size: 42px;
+  font-weight: 800;
+  text-transform: capitalize;
 }
 h3 {
   font-size: 38px;
+  font-weight: 700;
 }
-h4 {
+h4 ,.other-details h4 #humidity-value,.other-details h4 #wind-value{
   font-size: 32px;
+  font-weight: 600;
 }
 .container{
   margin-inline: 25px;
@@ -81,7 +88,6 @@ h4 {
 }
 
 /* other-details */
-.other-details h3,
 .other-details h4 {
   display: inline-block;
 }

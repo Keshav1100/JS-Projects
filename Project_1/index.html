@@ -24,29 +24,29 @@
       </div>
       <!-- Weather Images based on the weather type -->
       <div class="weather-image container">
-        <img src="./Images/Sunny.png" alt="Sunny" />
+        <img id="weather-image" src="./Images/Sunny.png" alt="Sunny" />
       </div>
       <!-- Temperature detail -->
       <div class="temp-info container">
-        <h2>22&deg; C</h2>
+        <h2><span id="temp-value"></span>&deg; C</h2>
       </div>
       <!-- City name -->
       <div class="city-name container">
-        <h2>New Delhi</h2>
+        <h2><span id="city-name-value"></span></h2>
       </div>
       <!-- Some other details -->
       <div class="other-details container">
         <div class="humidity-detail">
           <div class="graphic-info">
             <img src="./Images/humidity.png" alt="humidity" />
-            <h4>56%</h4>
+            <h4><span id="humidity-value"></span>%</h4>
           </div>
           <h4>Humidity</h4>
         </div>
         <div class="wind-speed-detail">
           <div class="graphic-info">
             <img src="./Images/wind.png" alt="wind" />
-            <h4>56 km/hr</h4>
+            <h4><span id="wind-value"></span>km/hr</h4>
           </div>
           <h4>Wind Speed</h4>
         </div>
@@ -75,4 +75,5 @@
     src="https://kit.fontawesome.com/5fede281c8.js"
     crossorigin="anonymous"
   ></script>
+  <script src="./index.js"></script>
 </html>
