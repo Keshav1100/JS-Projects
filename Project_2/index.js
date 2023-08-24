@@ -2,45 +2,43 @@ const toDo = document.getElementById("to-do");
 const addTaskBtn = document.getElementById("add-task");
 const taskList = document.querySelector(".task-container ul");
 
-function checkImg() {
-  let tasks = document.querySelectorAll(".task-item");
-  for (let task of tasks) {
-    // console.log(task.firstElementChild.firstChild)
-    console.log(tasks);
-    console.log(task.childNodes[3].classList);
-    task.childNodes[3].classList.forEach((clname) => {
-      console.log(clname)
-      if (clname === "done") {
-        task.firstElementChild.firstChild.setAttribute(
-          "src",
-          "./images/check-mark.png"
-        );
-      } else {
-        task.firstElementChild.firstChild.setAttribute(
-          "src",
-          "./images/radio.png"
-        );
-      }
-    });
-  }
+// Function to change the image on click
+function taskClickChanges() {
+  let taskValues = document.querySelectorAll(".task");
+  taskValues.forEach((taskValue) => {
+    if (taskValue.className.includes("done")) {
+      let imageToChange = taskValue.previousElementSibling.firstElementChild;
+      imageToChange.setAttribute("src", "./images/check-mark.png");
+    } else {
+      let imageToChange = taskValue.previousElementSibling.firstElementChild;
+      imageToChange.setAttribute("src", "./images/radio.png");
+    }
+  });
 }
 
-function addFunctionality() {
-  let tasks = document.querySelectorAll(".task");
-  tasks.forEach((task) => {
+function addClickFunctionality() {
+  let taskValues = document.querySelectorAll(".task");
+  taskValues.forEach((task) => {
     task.addEventListener("click", (e) => {
-      e.target.classList.toggle("done");
-      checkImg();
+      if(e.currentTarget.className.includes("done")){
+        e.currentTarget.classList.remove("done")
+      }
+      else{
+        e.currentTarget.classList.add("done");
+        console.log(e.currentTarget);
+      }
+      taskClickChanges();
+    });
+  });
+  let taskDelete = document.querySelectorAll(".task-delete");
+  taskDelete.forEach((deleteBtn) => {
+    deleteBtn.addEventListener("click", (e) => {
+      // console.log(e.currentTarget.parentElement)
+      // e.target.parentElement.previousElementSibling.remove()
+      e.currentTarget.parentElement.remove();
     });
   });
 }
-// toDo.addEventListener("focus",()=>{
-
-//     if (document.activeElement === toDo) {
-//       document.querySelector(".input-row form").classList.toggle("form-outline");
-//     }
-// })
-
 function createTaskItem(value) {
   const item = document.createElement("li");
   item.className = "task-item";
@@ -56,7 +54,7 @@ function createTaskItem(value) {
 
 function addTask(task) {
   taskList.append(task);
-  addFunctionality();
+  // addFunctionality();
 }
 
 addTaskBtn.addEventListener("click", (e) => {
@@ -64,4 +62,5 @@ addTaskBtn.addEventListener("click", (e) => {
   let item = createTaskItem(toDo.value);
   addTask(item);
   toDo.value = "";
+  addClickFunctionality();
 });
