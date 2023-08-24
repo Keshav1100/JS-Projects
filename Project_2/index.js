@@ -15,7 +15,6 @@ function taskClickChanges() {
     }
   });
 }
-
 function addClickFunctionality() {
   let taskValues = document.querySelectorAll(".task");
   taskValues.forEach((task) => {
@@ -28,14 +27,15 @@ function addClickFunctionality() {
         console.log(e.currentTarget);
       }
       taskClickChanges();
+      saveTasks()
+      
     });
   });
   let taskDelete = document.querySelectorAll(".task-delete");
   taskDelete.forEach((deleteBtn) => {
     deleteBtn.addEventListener("click", (e) => {
-      // console.log(e.currentTarget.parentElement)
-      // e.target.parentElement.previousElementSibling.remove()
       e.currentTarget.parentElement.remove();
+      saveTasks()
     });
   });
 }
@@ -51,12 +51,14 @@ function createTaskItem(value) {
   /></span>`;
   return item;
 }
-
 function addTask(task) {
   taskList.append(task);
-  // addFunctionality();
+  saveTasks()
 }
 
+function saveTasks() {
+  localStorage.setItem("tasks", taskList.innerHTML)
+}
 addTaskBtn.addEventListener("click", (e) => {
   e.preventDefault();
   let item = createTaskItem(toDo.value);
@@ -64,3 +66,7 @@ addTaskBtn.addEventListener("click", (e) => {
   toDo.value = "";
   addClickFunctionality();
 });
+if(localStorage.getItem("tasks")){
+  taskList.innerHTML = localStorage.getItem("tasks")
+  addClickFunctionality()
+}
