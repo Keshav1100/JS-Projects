@@ -4,214 +4,236 @@ const answerOptions = document.querySelector(".answer-options");
 
 const questionSet = [
   {
-    "question": "Which gas is most abundant in Earth's atmosphere?",
-    "options": [
+    question:
+      "Which planet is often referred to as the 'Evening Star' or the 'Morning Star'?",
+    options: [
       {
-        "text": "Oxygen",
-        "correct": "false"
+        text: "Mars",
+        correct: "false",
       },
       {
-        "text": "Nitrogen",
-        "correct": "true"
+        text: "Venus",
+        correct: "true",
       },
       {
-        "text": "Carbon dioxide",
-        "correct": "false"
+        text: "Mercury",
+        correct: "false",
       },
       {
-        "text": "Helium",
-        "correct": "false"
-      }
-    ]
+        text: "Neptune",
+        correct: "false",
+      },
+    ],
   },
   {
-    "question": "What is the largest planet in our solar system?",
-    "options": [
+    question: "Which gas is most abundant in Earth's atmosphere?",
+    options: [
       {
-        "text": "Earth",
-        "correct": "false"
+        text: "Oxygen",
+        correct: "false",
       },
       {
-        "text": "Jupiter",
-        "correct": "true"
+        text: "Nitrogen",
+        correct: "true",
       },
       {
-        "text": "Saturn",
-        "correct": "false"
+        text: "Carbon dioxide",
+        correct: "false",
       },
       {
-        "text": "Mars",
-        "correct": "false"
-      }
-    ]
+        text: "Helium",
+        correct: "false",
+      },
+    ],
   },
   {
-    "question": "Which famous scientist developed the theory of relativity?",
-    "options": [
+    question: "What is the largest planet in our solar system?",
+    options: [
       {
-        "text": "Isaac Newton",
-        "correct": "false"
+        text: "Earth",
+        correct: "false",
       },
       {
-        "text": "Marie Curie",
-        "correct": "false"
+        text: "Jupiter",
+        correct: "true",
       },
       {
-        "text": "Albert Einstein",
-        "correct": "true"
+        text: "Saturn",
+        correct: "false",
       },
       {
-        "text": "Galileo Galilei",
-        "correct": "false"
-      }
-    ]
+        text: "Mars",
+        correct: "false",
+      },
+    ],
   },
   {
-    "question": "What event marked the beginning of World War II?",
-    "options": [
+    question: "Which famous scientist developed the theory of relativity?",
+    options: [
       {
-        "text": "The bombing of Hiroshima and Nagasaki",
-        "correct": "false"
+        text: "Isaac Newton",
+        correct: "false",
       },
       {
-        "text": "The signing of the Treaty of Versailles",
-        "correct": "false"
+        text: "Marie Curie",
+        correct: "false",
       },
       {
-        "text": "The invasion of Poland by Germany",
-        "correct": "true"
+        text: "Albert Einstein",
+        correct: "true",
       },
       {
-        "text": "The Russian Revolution",
-        "correct": "false"
-      }
-    ]
+        text: "Galileo Galilei",
+        correct: "false",
+      },
+    ],
   },
   {
-    "question": "Which planet is known as the 'Red Planet'?",
-    "options": [
+    question: "What event marked the beginning of World War II?",
+    options: [
       {
-        "text": "Venus",
-        "correct": "false"
+        text: "The bombing of Hiroshima and Nagasaki",
+        correct: "false",
       },
       {
-        "text": "Mars",
-        "correct": "true"
+        text: "The signing of the Treaty of Versailles",
+        correct: "false",
       },
       {
-        "text": "Jupiter",
-        "correct": "false"
+        text: "The invasion of Poland by Germany",
+        correct: "true",
       },
       {
-        "text": "Uranus",
-        "correct": "false"
-      }
-    ]
+        text: "The Russian Revolution",
+        correct: "false",
+      },
+    ],
   },
   {
-    "question": "What is the currency of Japan?",
-    "options": [
+    question: "Which planet is known as the 'Red Planet'?",
+    options: [
       {
-        "text": "Yen",
-        "correct": "true"
+        text: "Venus",
+        correct: "false",
       },
       {
-        "text": "Dollar",
-        "correct": "false"
+        text: "Mars",
+        correct: "true",
       },
       {
-        "text": "Euro",
-        "correct": "false"
+        text: "Jupiter",
+        correct: "false",
       },
       {
-        "text": "Pound",
-        "correct": "false"
-      }
-    ]
+        text: "Uranus",
+        correct: "false",
+      },
+    ],
   },
   {
-    "question": "Which famous artist painted the Mona Lisa?",
-    "options": [
+    question: "What is the currency of Japan?",
+    options: [
       {
-        "text": "Pablo Picasso",
-        "correct": "false"
+        text: "Yen",
+        correct: "true",
       },
       {
-        "text": "Vincent van Gogh",
-        "correct": "false"
+        text: "Dollar",
+        correct: "false",
       },
       {
-        "text": "Leonardo da Vinci",
-        "correct": "true"
+        text: "Euro",
+        correct: "false",
       },
       {
-        "text": "Michelangelo",
-        "correct": "false"
-      }
-    ]
+        text: "Pound",
+        correct: "false",
+      },
+    ],
   },
   {
-    "question": "What is the largest mammal on Earth?",
-    "options": [
+    question: "Which famous artist painted the Mona Lisa?",
+    options: [
       {
-        "text": "African Elephant",
-        "correct": "false"
+        text: "Pablo Picasso",
+        correct: "false",
       },
       {
-        "text": "Blue Whale",
-        "correct": "true"
+        text: "Vincent van Gogh",
+        correct: "false",
       },
       {
-        "text": "Giraffe",
-        "correct": "false"
+        text: "Leonardo da Vinci",
+        correct: "true",
       },
       {
-        "text": "Hippopotamus",
-        "correct": "false"
-      }
-    ]
+        text: "Michelangelo",
+        correct: "false",
+      },
+    ],
   },
   {
-    "question": "Which country is known as the 'Land of the Rising Sun'?",
-    "options": [
+    question: "What is the largest mammal on Earth?",
+    options: [
       {
-        "text": "China",
-        "correct": "false"
+        text: "African Elephant",
+        correct: "false",
       },
       {
-        "text": "South Korea",
-        "correct": "false"
+        text: "Blue Whale",
+        correct: "true",
       },
       {
-        "text": "Japan",
-        "correct": "true"
+        text: "Giraffe",
+        correct: "false",
       },
       {
-        "text": "Vietnam",
-        "correct": "false"
-      }
-    ]
+        text: "Hippopotamus",
+        correct: "false",
+      },
+    ],
   },
   {
-    "question": "What is the chemical symbol for gold?",
-    "options": [
+    question: "Which country is known as the 'Land of the Rising Sun'?",
+    options: [
       {
-        "text": "Ag",
-        "correct": "false"
+        text: "China",
+        correct: "false",
       },
       {
-        "text": "Au",
-        "correct": "true"
+        text: "South Korea",
+        correct: "false",
       },
       {
-        "text": "Fe",
-        "correct": "false"
+        text: "Japan",
+        correct: "true",
       },
       {
-        "text": "Cu",
-        "correct": "false"
-      }
-    ]
+        text: "Vietnam",
+        correct: "false",
+      },
+    ],
+  },
+  {
+    question: "What is the chemical symbol for gold?",
+    options: [
+      {
+        text: "Ag",
+        correct: "false",
+      },
+      {
+        text: "Au",
+        correct: "true",
+      },
+      {
+        text: "Fe",
+        correct: "false",
+      },
+      {
+        text: "Cu",
+        correct: "false",
+      },
+    ],
   },
   {
     question:
@@ -235,7 +257,6 @@ const questionSet = [
       },
     ],
   },
-  
 ];
 
 let currentQuesIndex = 0;
@@ -244,7 +265,6 @@ let score = 0;
 function showQuiz() {
   resetState();
   if (currentQuesIndex >= questionSet.length) {
-
     answerOptions.innerHTML = "ellojbjh";
     answerOptions.innerHTML = "";
     question.innerText = `You scored ${score} out of ${questionSet.length}`;
