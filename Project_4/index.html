@@ -8,13 +8,36 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
+    <!-- Main container -->
     <div class="main-container">
       <h1>Generate a <span>Random Password</span></h1>
+      <!-- Generated password display box -->
       <div class="pwd-box">
-        <input type="text" name="pwd" id="pwd" placeholder="Password">
-        <img src="./images/copy.png" alt="copy">
+        <input type="text" name="pwd" id="pwd" placeholder="Password" />
+        <img id="copy-pwd" src="./images/copy.png" alt="copy" />
+        <img
+          id="copy-tick"
+          class="hidden"
+          src="./images/copied.png"
+          alt="tick"
+        />
       </div>
-      <button id="gen-pwd"><img src="./images/thunder.png" alt="thunder speed">Generate Password</button>
+      <!-- Getting Password size -->
+      <h2>Password size:</h2>
+      <div class="pwd-size">
+        <button id="minus-size">
+          <img src="./images/minus.svg" alt="minus" />
+        </button>
+        <span id="pwd-size-value">8</span
+        ><button id="plus-size">
+          <img src="./images/plus.svg" alt="plus" />
+        </button>
+      </div>
+      <!-- Generate password button -->
+      <button id="gen-pwd">
+        <img src="./images/thunder.png" alt="thunder speed" />Generate Password
+      </button>
     </div>
   </body>
+  <script src="./index.js"></script>
 </html>
