@@ -1,5 +1,7 @@
 let qrImgBox = document.getElementById("qr-img-box");
 let qrImg = document.getElementById("qr-img");
+let genQrCodeBtn = document.getElementById("gen-qr-code");
+genQrCodeBtn.addEventListener("click", genQr);
 async function genQr() {
   let textUrl = document.getElementById("text-url");
   if (textUrl.value !== "") {
@@ -13,5 +15,3 @@ async function genQr() {
     }, 2000);
   }
 }
-let genQrCodeBtn = document.getElementById("gen-qr-code");
-genQrCodeBtn.addEventListener("click", genQr);
