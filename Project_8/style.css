@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+}
+.main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffe4c4;
+}
+.main-box {
+  width: max-content;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  padding: 1rem 1.5rem;
+  border-radius: 0.2rem;
+}
+.main-box label {
+  width: 100%;
+  font-size: 1.2rem;
+  font-weight: 650;
+  text-align: left;
+}
+.main-box input {
+  width: 100%;
+  border-radius: 0.2rem;
+  padding: 0.4rem 1rem;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  border: none;
+  background-color: #ebe9e9;
+}
+.main-box input:focus {
+  outline: none;
+}
+.main-box #qr-img-box {
+  display: none;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+.main-box #gen-qr-code {
+  width: 100%;
+  padding: 0.4rem 0.2rem;
+  border: none;
+  margin-top: 1rem;
+  color: #f5f5f5;
+  background-color: #492c2c;
+  border-radius: 0.2rem;
+}
+
+.main-box #gen-qr-code:hover {
+  cursor: pointer;
+  background-color: #492c2cd2;
+}
+.main-box .shake-error {
+  animation: shakeError 0.1s linear infinite;
+}
+@keyframes shakeError {
+  0% {
+    transform: translateX(-2px);
+  }
+  100% {
+    transform: translateX(2px);
+  }
+}
