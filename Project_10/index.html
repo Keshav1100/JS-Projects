@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS - Music Player</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="player">
+        <div class="options-1">
+          <button>
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          <button>
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+        <div class="thumbnail">
+          <img
+            src="./images/baarish_thumbnail.jpg"
+            alt="thumbnail"
+            id="music-thumbnail"
+          />
+        </div>
+        <div class="music-info">
+          <p id="music-name">Baarish - Half Girlfriend</p>
+          <p id="music-singer">Atif Aslam</p>
+        </div>
+        <div class="music-audio">
+          <audio
+            src="./audioFiles/Baarish - Half Girlfriend (Ash King).mp3"
+             id="music-audio-file"
+          ></audio>
+          <input type="range" name="music-progress" id="music-progress">
+          <div class="music-audio-controls">
+            <button><i class="fa-solid fa-backward"></i></button>
+            <button id="play-pause"><i class="fa-solid fa-play"></i></button>
+            <button><i class="fa-solid fa-forward"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./index.js"></script>
+  <script
+    src="https://kit.fontawesome.com/5fede281c8.js"
+    crossorigin="anonymous"
+  ></script>
+</html>
