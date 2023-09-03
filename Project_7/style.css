@@ -1,6 +1,135 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Slab", serif;
+  color: #ffffff;
+  font-size: 1rem;
+}
+h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+/* Main body */
+.main {
+  width: 100%;
+  height: 100vh;
+  background-color: #1d1d1d;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+}
+/* Quote Box */
+.quote-box {
+  padding: 1rem 2rem;
+  width: 50%;
+  box-shadow: #ffffff29 0px 10px 36px 0px, #ffffff0f 0px 0px 0px 1px;
+  row-gap: 1.2rem;
+  border-radius: 1rem;
+  background-color: #404040;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.quote-box h2 {
+  position: relative;
+}
+.quote-box h2::after {
+  position: absolute;
+  content: "";
+  height: 2.5px;
+  width: 50%;
+  bottom: -10%;
+  left: 25%;
+  border-radius: 2px;
+  background-color: #f5f5f5;
+}
+.quote-box blockquote {
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.quote-box blockquote p {
+  width: 100%;
+}
+.quote-box blockquote p span {
+  display: inline-block;
+  width: 100%;
+}
+.quote-box blockquote #quote {
+  font-size: 1.2rem;
+  margin: 1rem 0 1.5rem 0;
+  text-align: center;
+}
+.quote-box blockquote p #quote-author {
+  text-align: right;
+}
+.quote-box blockquote span {
+  font-size: 1.5rem;
+}
+
+/* Buttons */
+.quote-box .btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 2.5rem;
+  width: max-content;
+}
+.quote-box .btns .btn {
+  padding: 0.6rem 1.2rem;
+  background-color: #ffffff;
+  border: 1px solid #b3b3b3;
+  font-size: 1rem;
+  color: #282828;
+  border-radius: 2rem;
+}
+.quote-box .btns .btn:nth-child(1) {
+  background-color: #282828;
+  color: #ffffff;
+  border: 1px solid #b3b3b3;
+}
+.quote-box .btns .btn:nth-child(2) {
+  display: flex;
+  align-items: center;
+}
+.quote-box .btns .btn img {
+  width: 1rem;
+  margin-right: 0.5rem;
+}
+.quote-box .btns .btn:hover {
+  background-color: #cdcdcdbb;
+  cursor: pointer;
+}
+
+/* Media Queries */
+@media screen and (max-width: 945px) {
+  .quote-box {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 585px) {
+  h2 {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 490px) {
+  * {
+    font-size: 0.8rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  .quote-box {
+    width: 90%;
+  }
 }
