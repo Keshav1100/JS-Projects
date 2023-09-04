@@ -45,6 +45,11 @@
   font-weight: 650;
   letter-spacing: 0.3rem;
 }
+.stopwatch-container .time-display span {
+  font-size: 4rem;
+  font-weight: 650;
+  letter-spacing: 0.3rem;
+}
 /* Timer Controls */
 .stopwatch-container .timer-controls {
   width: 60%;
