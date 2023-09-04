@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+}
+.main-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    135deg,
+    #f44369ff,
+    #e0426eff,
+    #cc4172ff,
+    #b74077ff,
+    #a33f7bff,
+    #8f3f80ff,
+    #7b3e84ff,
+    #663d89ff,
+    #523c8dff,
+    #3e3b92ff
+  );
+}
+.stopwatch-container {
+  width: 80%;
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  row-gap: 1.5rem;
+  padding-block: 1.5rem;
+  justify-content: center;
+  box-shadow: 1px 1px 20px 1px #ffffff;
+}
+/* Time display */
+.stopwatch-container .time-display {
+  width: 100%;
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 650;
+  letter-spacing: 0.3rem;
+}
+/* Timer Controls */
+.stopwatch-container .timer-controls {
+  width: 60%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/*Control Buttons*/
+.stopwatch-container .timer-controls #play-pause-btn {
+  padding: 1rem 1.2rem;
+  border: none;
+  background: none;
+  border-radius: 50%;
+  background-color: #dc143c;
+}
+.stopwatch-container .timer-controls #play-pause-btn:hover {
+  cursor: pointer;
+  background-color: #c61236;
+}
+.stopwatch-container .timer-controls .btn {
+  padding: 1.2rem;
+  width: max-content;
+  border: none;
+  border-radius: 50%;
+  background: linear-gradient(
+    135deg,
+    #f44369ff,
+    #e0426eff,
+    #cc4172ff,
+    #b74077ff,
+    #a33f7bff,
+    #8f3f80ff,
+    #7b3e84ff,
+    #663d89ff,
+    #523c8dff,
+    #3e3b92ff
+  );
+}
+.stopwatch-container .timer-controls .btn:hover {
+  cursor: pointer;
+  background: linear-gradient(
+    135deg,
+    rgba(244, 67, 105, 0.8),
+    rgba(224, 66, 110, 0.8),
+    rgba(204, 65, 114, 0.8),
+    rgba(183, 64, 119, 0.8),
+    rgba(163, 63, 123, 0.8),
+    rgba(143, 63, 128, 0.8),
+    rgba(123, 62, 132, 0.8),
+    rgba(102, 61, 137, 0.8),
+    rgba(82, 60, 141, 0.8),
+    rgba(62, 59, 146, 0.8)
+  );
+}
+
+/* Icons inside the control buttons */
+.stopwatch-container .timer-controls .btn i {
+  font-size: 1.2rem;
+  color: #f5f5f5;
+}
+
+.stopwatch-container .timer-controls #play-pause-btn i {
+  font-size: 3rem;
+}
+
+/* Media Queries */
+@media screen and (max-width: 520px) {
+  .stopwatch-container .time-display {
+    font-size: 2.5rem;
+  }
+  .stopwatch-container .timer-controls {
+    width: 100%;
+  }
+  .stopwatch-container .timer-controls .btn i {
+    font-size: 0.8rem;
+  }
+
+  .stopwatch-container .timer-controls #play-pause-btn i {
+    font-size: 1.5rem;
+  }
+  .stopwatch-container .timer-controls #play-pause-btn {
+    padding: 0.8rem 1.2rem;
+  }
+  .stopwatch-container .timer-controls .btn {
+    padding: 0.6rem 0.8rem;
+  }
+}
