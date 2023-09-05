@@ -5,6 +5,8 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 1rem;
 }
+
+/* Main container */
 .main-container {
   position: relative;
   width: 100%;
@@ -14,6 +16,7 @@
   align-items: center;
   justify-content: center;
 }
+/* Submit button */
 #submit-btn {
   padding: 0.4rem 1.5rem;
   border: none;
@@ -28,6 +31,7 @@
   cursor: pointer;
   background-color: rgba(220, 20, 60, 0.838);
 }
+/* Popup container */
 .popup-container {
   padding: 1rem;
   position: absolute;
@@ -41,13 +45,11 @@
   flex-wrap: nowrap;
   align-items: center;
   justify-content: center;
-  transform: translateX(-50%) translateY(-50%) scale(0);
-  transition: transform 5s ease-in-out;
+  visibility: hidden;
+  transition: transform 0.2s ease-in-out;
 }
-.popup-container.popup-show {
-  visibility: visible;
-  transform: translateX(-50%) translateY(-50%) scale(1);
-}
+
+/* h2 inside Popup container */
 .popup-container h2 {
   width: 100%;
   text-align: center;
@@ -55,6 +57,7 @@
   letter-spacing: 0.08rem;
   position: relative;
 }
+/* Tick icon on top of popup container */
 .popup-container h2 i {
   position: absolute;
   left: 50%;
@@ -72,6 +75,7 @@
   word-spacing: 0.05rem;
 }
 
+/* Ok button inside Popup container */
 .popup-container #popup-ok-btn {
   width: 100%;
   font-weight: 500;
@@ -87,7 +91,36 @@
   background-color: #d66a43;
 }
 
-.popup-hide {
-  transform: scale(0);
-  visibility: hidden;
+/* Media Queries */
+@media screen and (max-width: 1024px) {
+  .popup-container {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .popup-container h2 {
+    font-size: 2rem;
+  }
+  .popup-container {
+    width: 50%;
+  }
+  .popup-container h2 i {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 540px) {
+  .popup-container h2 {
+    font-size: 1.8rem;
+  }
+  .popup-container {
+    width: 60%;
+  }
+  .popup-container h2 i {
+    font-size: 1.8rem;
+  }
+}
+@media screen and (max-width: 410px) {
+  .popup-container h2 i {
+    top: -40%;
+  }
 }
