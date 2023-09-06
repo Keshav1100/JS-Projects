@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1rem;
+  letter-spacing: 2px;
+}
+
+:root {
+  --text-color: #231f20;
+  --background-color: #e7dfd8;
+}
+.dark-theme {
+  --text-color: #e7dfd8;
+  --background-color: #231f20;
+}
+.main-container {
+  width: 100%;
+  height: 100vh;
+  padding-inline: 4rem;
+  background-color: var(--background-color);
+  transition: background-color 0.2s ease;
+}
+.main-container .nav {
+  width: 100%;
+  height: 10vh;
+  padding-block: 1rem;
+  position: relative;
+}
+.main-container .nav #dark-theme-toggle {
+  color: var(--text-color);
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+  font-size: 1.5rem;
+  top: 50%;
+  transform: translateY(-30%);
+}
+.main-container .nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.main-container .nav ul li {
+  list-style: none;
+  padding: 0.4rem;
+}
+.main-container .nav ul li a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+.main-container .nav ul li a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 0.4rem;
+  text-decoration-color: var(--text-color);
+}
+.main-container .hero-section {
+  margin-block: 1rem;
+  width: 100%;
+  border: 1px solid var(--text-color);
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  padding: 0.8rem;
+  justify-content: space-between;
+  height: 80vh;
+}
+.main-container .hero-section img {
+  width: 40%;
+  height: 100%;
+}
+.main-container .hero-section .info {
+  width: 50%;
+  margin: 0.8rem;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.main-container .hero-section .info .text-info {
+  /* line-height: 4px; */
+}
+.main-container .hero-section .info .text-info h2 {
+  font-size: 2.4rem;
+  color: var(--text-color);
+  margin-bottom: 0.4rem;
+}
+.main-container .hero-section .info .text-info p {
+  font-size: 1.2rem;
+  color: var(--text-color);
+  /* line-height: 1rem; */
+}
+.main-container .hero-section .info .socials-info {
+  display: flex;
+  column-gap: 0.2rem;
+}
+.main-container .hero-section .info .socials-info a {
+  width: 1.8rem;
+  height: 1.8rem;
+}
+.main-container .hero-section .info .socials-info a i {
+  font-size: 1.5rem;
+  /* color: var(--text-color); */
+  color: var(--text-color);
+}
