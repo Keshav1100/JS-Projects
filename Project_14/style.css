@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+}
+body {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-color: #add8e6;
+}
+
+/* Password Box */
+.password-box {
+  width: 30%;
+  position: relative;
+  border-radius: 0.5rem;
+  padding-inline: 0.4rem;
+  background-color: #f0f8ff;
+}
+/* Input field inside password box */
+.password-box input {
+  background: transparent;
+  width: 85%;
+  border-radius: 0.5rem;
+  border: none;
+  padding: 0.5rem;
+}
+.password-box input[type="password"]::-ms-reveal {
+  display: none;
+}
+.password-box input:focus {
+  outline: none;
+}
+/* Eye icon button inside password box */
+.password-box button {
+  position: absolute;
+  right: 8%;
+  padding: 0.5rem;
+  width: 8%;
+  background: transparent;
+  border: none;
+  color: #00008b;
+}
+.password-box button:hover {
+  cursor: pointer;
+}
+
+/* Media Queries */
+@media screen and (max-width: 868px) {
+  .password-box button {
+    right: 10%;
+  }
+}
+@media screen and (max-width: 640px) {
+  .password-box {
+    width: 70%;
+  }
+}
