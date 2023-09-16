@@ -6,9 +6,8 @@ const cityNameValue = document.getElementById("city-name-value");
 const humidityValue = document.getElementById("humidity-value");
 
 // Add your API Key
-const apiKey = "apiKey";
+const apiKey = "d6d8e88ac15b7215efacd33d69f500f1";
 const windValue = document.getElementById("wind-value");
-fetchWeather();
 
 const fetchWeather = async function () {
   let city = searchCity.value;
@@ -40,10 +39,18 @@ function changeValues(temp, city, humidity, wind, weatherValue) {
 }
 
 function changeImage(weather) {
-  weatherImage.setAttribute("src", `./Images/${weather}.png`);
+  weatherImage.setAttribute(
+    "src",
+    `${
+      `./Images/${weather}.png`
+        ? `./Images/${weather}.png`
+        : "./Images/rain.png"
+    }`
+  );
 }
 
 searchIcon.addEventListener("click", async function (e) {
   e.preventDefault();
   fetchWeather();
 });
+fetchWeather();

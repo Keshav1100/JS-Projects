@@ -62,14 +62,22 @@ body {
 .form-container .email-input-box input:focus {
   outline: none;
 }
-.form-container .email-input-box i {
+.form-container .email-input-box .send-button{
   position: absolute;
-  right: 5%;
-  top: 50%;
-  transform: translateY(-50%);
+  width: 12%;
+  right: 2%;
+  top: 1%;
+  padding: 0.6rem;
+  background: transparent;
+  border: none;
+}
+.form-container .email-input-box i {
+  /* top: 50%;
+  transform: translateY(-50%); */
   /* width: 20%; */
+  color: #f5f5f5;
   font-size: 1.5rem;
 }
-.form-container .email-input-box i:hover {
+.form-container .email-input-box .send-button:hover {
   cursor: pointer;
 }
